@@ -1,0 +1,10 @@
+{
+  "extends": "@dating-app/config-typescript/nestjs.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src", "test"]
+}

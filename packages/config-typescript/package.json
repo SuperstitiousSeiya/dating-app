@@ -1,0 +1,15 @@
+{
+  "name": "@dating-app/config-typescript",
+  "version": "0.0.1",
+  "private": true,
+  "exports": {
+    "./base": "./base.json",
+    "./base.json": "./base.json",
+    "./nextjs": "./nextjs.json",
+    "./nextjs.json": "./nextjs.json",
+    "./nestjs": "./nestjs.json",
+    "./nestjs.json": "./nestjs.json",
+    "./react-native": "./react-native.json",
+    "./react-native.json": "./react-native.json"
+  }
+}

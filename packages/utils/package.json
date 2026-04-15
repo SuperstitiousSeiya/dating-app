@@ -1,0 +1,26 @@
+{
+  "name": "@dating-app/utils",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./age": "./src/age.ts",
+    "./array": "./src/array.ts",
+    "./crypto": "./src/crypto.ts",
+    "./date": "./src/date.ts",
+    "./distance": "./src/distance.ts",
+    "./geo": "./src/geo.ts",
+    "./object": "./src/object.ts",
+    "./pagination": "./src/pagination.ts",
+    "./retry": "./src/retry.ts",
+    "./slug": "./src/slug.ts",
+    "./string": "./src/string.ts",
+    "./validation": "./src/validation.ts"
+  },
+  "devDependencies": {
+    "@dating-app/config-typescript": "workspace:*",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@dating-app/validators",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./auth": "./src/auth.validator.ts",
+    "./profile": "./src/profile.validator.ts",
+    "./swipe": "./src/swipe.validator.ts",
+    "./message": "./src/message.validator.ts",
+    "./match": "./src/match.validator.ts",
+    "./notification": "./src/notification.validator.ts",
+    "./media": "./src/media.validator.ts",
+    "./pagination": "./src/pagination.validator.ts"
+  },
+  "dependencies": {
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@dating-app/config-typescript": "workspace:*",
+    "typescript": "^5.4.0"
+  }
+}
