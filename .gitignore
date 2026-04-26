@@ -9,6 +9,14 @@ dist/
 .expo/
 out/
 build/
+.build/
+
+# Backend: keep src TypeScript-only (ignore emitted artifacts)
+apps/backend/src/**/*.js
+apps/backend/src/**/*.d.ts
+apps/backend/src/**/*.map
+.build/
+
 
 # Environment files
 .env

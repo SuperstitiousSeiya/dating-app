@@ -25,7 +25,7 @@ export class TransformInterceptor<T> implements NestInterceptor<T, ApiResponse<T
       (request.headers["x-request-id"] as string | undefined) ?? uuidv4();
 
     return next.handle().pipe(
-      map((data) => ({
+      map((data: T) => ({
         success: true as const,
         data,
         meta: {

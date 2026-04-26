@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "outDir": "./.build",
+    "sourceMap": false,
+    "declaration": false,
+    "declarationMap": false
+  },
+  "exclude": ["test", "**/*.spec.ts", "**/*.test.ts"]
+}
+

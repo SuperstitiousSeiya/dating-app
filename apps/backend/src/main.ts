@@ -4,6 +4,8 @@ import {
   NestFastifyApplication,
 } from "@nestjs/platform-fastify";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
+import cookie from "@fastify/cookie";
+import multipart from "@fastify/multipart";
 
 import { AppModule } from "./app.module";
 import { HttpExceptionFilter } from "./common/filters/http-exception.filter";
@@ -21,6 +23,15 @@ async function bootstrap(): Promise<void> {
     AppModule,
     adapter,
   );
+
+  const fastify = app.getHttpAdapter().getInstance();
+
+  await fastify.register(cookie as unknown as Parameters<typeof fastify.register>[0], {
+    secret: process.env["COOKIE_SECRET"] ?? "dev-cookie-secret",
+  });
+  await fastify.register(multipart as unknown as Parameters<typeof fastify.register>[0], {
+    limits: { fileSize: 10 * 1024 * 1024 },
+  });
 
   app.enableCors({
     origin: (process.env["ALLOWED_ORIGINS"] ?? "http://localhost:3000").split(","),

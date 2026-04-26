@@ -6,6 +6,7 @@ export type ProfileDocument = HydratedDocument<Profile>;
 
 @Schema({ _id: true })
 class ProfilePhoto {
+  _id?: Types.ObjectId;
   @Prop({ required: true }) cloudinaryId!: string;
   @Prop({ required: true }) url!: string;
   @Prop({ required: true }) width!: number;

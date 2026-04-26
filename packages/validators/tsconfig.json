@@ -1,9 +1,10 @@
 {
   "extends": "@dating-app/config-typescript/base.json",
   "compilerOptions": {
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "noEmit": true
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noEmit": true,
+    "verbatimModuleSyntax": true
   },
   "include": ["src"]
 }

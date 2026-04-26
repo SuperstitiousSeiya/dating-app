@@ -2,25 +2,70 @@
   "name": "@dating-app/utils",
   "version": "0.0.1",
   "private": true,
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./age": "./src/age.ts",
-    "./array": "./src/array.ts",
-    "./crypto": "./src/crypto.ts",
-    "./date": "./src/date.ts",
-    "./distance": "./src/distance.ts",
-    "./geo": "./src/geo.ts",
-    "./object": "./src/object.ts",
-    "./pagination": "./src/pagination.ts",
-    "./retry": "./src/retry.ts",
-    "./slug": "./src/slug.ts",
-    "./string": "./src/string.ts",
-    "./validation": "./src/validation.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./age": {
+      "types": "./dist/age.d.ts",
+      "default": "./dist/age.js"
+    },
+    "./array": {
+      "types": "./dist/array.d.ts",
+      "default": "./dist/array.js"
+    },
+    "./crypto": {
+      "types": "./dist/crypto.d.ts",
+      "default": "./dist/crypto.js"
+    },
+    "./date": {
+      "types": "./dist/date.d.ts",
+      "default": "./dist/date.js"
+    },
+    "./distance": {
+      "types": "./dist/distance.d.ts",
+      "default": "./dist/distance.js"
+    },
+    "./geo": {
+      "types": "./dist/geo.d.ts",
+      "default": "./dist/geo.js"
+    },
+    "./object": {
+      "types": "./dist/object.d.ts",
+      "default": "./dist/object.js"
+    },
+    "./pagination": {
+      "types": "./dist/pagination.d.ts",
+      "default": "./dist/pagination.js"
+    },
+    "./retry": {
+      "types": "./dist/retry.d.ts",
+      "default": "./dist/retry.js"
+    },
+    "./slug": {
+      "types": "./dist/slug.d.ts",
+      "default": "./dist/slug.js"
+    },
+    "./string": {
+      "types": "./dist/string.d.ts",
+      "default": "./dist/string.js"
+    },
+    "./validation": {
+      "types": "./dist/validation.d.ts",
+      "default": "./dist/validation.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "bunx rimraf dist",
+    "type-check": "tsc -p tsconfig.build.json --noEmit"
   },
   "devDependencies": {
     "@dating-app/config-typescript": "workspace:*",
+    "@types/node": "^22.0.0",
     "typescript": "^5.4.0"
   }
 }

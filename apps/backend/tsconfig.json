@@ -2,9 +2,16 @@
   "extends": "@dating-app/config-typescript/nestjs.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "rootDir": "./src",
+    "outDir": "./.build",
+    "noEmit": true,
+    "allowImportingTsExtensions": false,
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false
   },
   "include": ["src", "test"]
 }
